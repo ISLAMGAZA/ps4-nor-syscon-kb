@@ -24,14 +24,26 @@
 </head>
 <body class="lang-en">
 <header>
- <h1>PS4 NOR &amp; Syscon Open Repair KB</h1>
+  <img src="../branding/app_logo.png" alt="PS4 NOR EASYTOOL" style="height:40px;border-radius:8px">
+  <h1>PS4 NOR &amp; Syscon Open Repair KB</h1>
  <span style="flex:1"></span>
  <button id="en" class="active" onclick="setLang('en')">EN</button>
  <button id="ar" onclick="setLang('ar')">ع</button>
 </header>
 <main>
  <div class="en"><p>Generated from <code>PS4 NOR EASYTOOL V1</code> (by ISLAM JAMEL). Machine-readable source: <code>kb.json</code>.</p></div>
- <div class="ar"><p>مولّدة من <code>PS4 NOR EASYTOOL V1</code> (بواسطة ISLAM JAMEL). المصدر الآلي: <code>kb.json</code>.</p></div>
+  <div class="ar"><p>مولّدة من <code>PS4 NOR EASYTOOL V1</code> (بواسطة ISLAM JAMEL). المصدر الآلي: <code>kb.json</code>.</p></div>
+
+  <div class="en">
+    <p><b>Status:</b> A personal effort (تعب شخصي) — still under active development (قيد التطوير).</p>
+    <p>Support the work: <a href="https://paypal.me/islamjamelak">paypal.me/islamjamelak</a> · code &amp; data by <a href="https://github.com/ISLAMGAZA">ISLAMGAZA</a>.</p>
+    <p><i>Assembled with opencode — for the hands that repair, not the bins that fill. Every console brought back to life is a small victory; this project only helps map the way.</i></p>
+  </div>
+  <div class="ar">
+    <p><b>الحالة:</b> جهد شخصي (تعب شخصي) — لا يزال قيد التطوير النشط.</p>
+    <p>ادعم العمل: <a href="https://paypal.me/islamjamelak">paypal.me/islamjamelak</a> · الأداة والبيانات من <a href="https://github.com/ISLAMGAZA">ISLAMGAZA</a>.</p>
+    <p><i>صِيغَتْ بـ opencode — لأجل الأيادي التي تُصلح، لا للحاويات التي تمتلئ. كل جهاز يُعاد إحياؤه نصرٌ صغير، وهذا المشروع لا يرسم سوى الطريق.</i></p>
+  </div>
  <div class="en">
  <h2>NOR flash regions (32 MB sflash0)</h2>
  <table><thead><tr><th>Region</th><th>Offset</th><th>Size</th><th>Class</th><th>Per-console</th><th>Donor</th></tr></thead>
@@ -191,7 +203,7 @@
  <p>واصف CORE_SWCH المكوّن من 16 بايت خاص بكل كونسول/موديل وغير قابل للتنبؤ؛ الأداة تخمّنه بكتابة NOR رقم N + Syscon معدّل وقراءة UART.</p>
 </div>
 </main>
-<footer>Docs CC-BY-4.0; code MIT. Tool &amp; data by ISLAM JAMEL. Generated 2026-07-14T13:35:27Z.</footer>
+  <footer>Docs CC-BY-4.0; code MIT. Tool &amp; data by <a href="https://github.com/ISLAMGAZA">ISLAM JAMEL</a> · <a href="https://paypal.me/islamjamelak">Donate</a>. Assembled with opencode. Generated 2026-07-14T13:35:27Z.</footer>
 <script>
  function setLang(l){document.body.className='lang-'+l;
    document.getElementById('en').classList.toggle('active',l==='en');

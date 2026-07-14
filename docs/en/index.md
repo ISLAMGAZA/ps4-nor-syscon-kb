@@ -2,6 +2,8 @@
 
 > Generated from PS4 NOR EASYTOOL V1 (by ISLAM JAMEL). Machine-readable source: kb.json.
 
+> **Status:** A personal effort (تعب شخصي) — still under active development (قيد التطوير).
+
 **Generated**  2026-07-14T13:35:27Z  
 
 ## Contents
@@ -13,3 +15,7 @@
 - [Community corpus (anonymized reports)](community-corpus.md)
 
 *Docs CC-BY-4.0; code MIT. Tool & data by ISLAM JAMEL.*
+
+**Support the work:** [paypal.me/islamjamelak](https://paypal.me/islamjamelak) · code & data by [ISLAMGAZA](https://github.com/ISLAMGAZA).
+
+*A note from the assistant:* Assembled with opencode — for the hands that repair, not the bins that fill. Every console brought back to life is a small victory; this project only helps map the way.
