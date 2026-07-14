@@ -5,7 +5,7 @@ Every report is produced by `main.export_report()` in **PS4 NOR EASYTOOL V1**
 no serial, MAC, HDD or board-id is included.
 
 كل تقرير يُنتج بواسطة `main.export_report()` في **PS4 NOR EASYTOOL V1** (أو زر
-**تصدير التقرير** في الواجهة). وهو **مُجهّل عمدًا**: لا سيريال ولا MAC ولا بيانات
+**تصدير التقرير** في الواجهة). وهو **لا يكشف هوية الجهاز عمدًا**: لا سيريال ولا MAC ولا بيانات
 قرص ولا board-id.
 
 ## Fields / الحقول

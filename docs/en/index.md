@@ -2,7 +2,7 @@
 
 > Generated from PS4 NOR EASYTOOL V1 (by ISLAM JAMEL). Machine-readable source: kb.json.
 
-> **Status:** A personal effort (تعب شخصي) — still under active development (قيد التطوير).
+> **Status:** Still under active development (قيد التطوير).
 
 **Generated**  2026-07-14T13:35:27Z  
 

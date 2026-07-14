@@ -22,7 +22,7 @@
 ## English
 
 ### What is this?
-> **Status:** A personal effort (تعب شخصي) — still under active development (قيد التطوير).
+> **Status:** Still under active development (قيد التطوير).
 
 A free, open project that turns the knowledge embedded in **PS4 NOR EASYTOOL V1**
 into a **shared, searchable repair knowledge base** for the PS4 maintenance
@@ -113,12 +113,21 @@ A look at the tool and knowledge base in action:
 | ![Regenerate NVS](screenshots/REG_NVS.PNG) | ![Reg NVS results](screenshots/REG_NVS_RESULTS.PNG) |
 | ![Results](screenshots/RESULTSE.PNG) | ![About](screenshots/ABOUT.PNG) |
 
+#### CLI (console tool)
+The same engine also ships as a command-line tool (`PS4_NOR_EASYTOOL_V1.exe`):
+
+| | |
+|---|---|
+| ![CLI main](screenshots/CLI_MAIN.PNG) | ![NOR repair options](screenshots/NOR_REPAIR_OPTIONS.PNG) |
+| ![CLI results](screenshots/RESULTS_CLI.PNG) | ![NVS](screenshots/NVS_CLI.PNG) |
+| ![NVS results CLI](screenshots/NVS_RESULTS_CLI.PNG) | |
+
 ---
 
 ## العربية
 
 ### ما هذا المشروع؟
-> **الحالة:** جهد شخصي (تعب شخصي) — لا يزال قيد التطوير النشط (قيد التطوير).
+> **الحالة:** لا يزال قيد التطوير النشط (قيد التطوير).
 
 مشروع مفتوح ومجاني يحوّل المعرفة المضمّنة في أداة **PS4 NOR EASYTOOL V1** إلى
 **قاعدة معرفة مشتركة قابلة للبحث** لصيانة متحكمات PS4 NOR و Syscon، مصحوباً
@@ -129,11 +138,11 @@ A look at the tool and knowledge base in action:
   Syscon، 14 حقل NVS، 20 نوع عطل، 8 عمليات، 14 معلومة سريعة.
 - **توثيق ثنائي اللغة** (`docs/en` + `docs/ar`) مع `docs/index.html` يتبدّل
   بين الإنجليزية والعربية داخل المتصفح.
-- **مستودع إصلاح مفتوح**: يرسل الفنيّون تقارير صحّية مُجهّلة، وتُجمَّع في
+- **مستودع إصلاح مفتوح**: يرسل الفنيّون تقارير صحّية لا تكشف هوية الجهاز، وتُجمَّع في
   `community/stats.json` (دون حفظ السيريال/MAC/القرص/معرّف اللوحة أبداً).
 - **تطبيق PS4 NOR EASYTOOL V1 الرفيق** (ويندوز، لـ ISLAM JAMEL): فحص وإصلاح
   وإعادة توليد NVS وتراجع SMART وتبديل الشريحة وغيرها — مع زر **«Submit to
-  corpus»** داخل التطبيق يرفع تقريراً مُجهّلاً إلى هذا المستودع مباشرة.
+  corpus»** داخل التطبيق يرفع تقريراً لا يكشف هوية الجهاز إلى هذا المستودع مباشرة.
 
 ### التحميل والتثبيت
 1. افتح **Releases** وحمّل `PS4_NOR_EASYTOOL_V1_GUI.exe` (رسومي) و/أو
@@ -157,7 +166,7 @@ A look at the tool and knowledge base in action:
 عبر GitHub Action عند كل طلب سحب.
 
 ### المساهمة
-- **من التطبيق**: زر «Submit to corpus» (مُجهّل، بلا أسرار).
+- **من التطبيق**: زر «Submit to corpus» (لا يكشف هوية الجهاز، بلا أسرار).
 - **يدوياً**: أضف تقرير JSON إلى `community/corpus/` أو افتح Pull Request
   (انظر `community/CONTRIBUTING.md` و`community/SCHEMA.md`).
 - **الأفكار والأسئلة**: افتح Issue أو استخدم Discussions.
@@ -178,6 +187,15 @@ A look at the tool and knowledge base in action:
 | ![الإصلاح](screenshots/REPAIR.PNG) | ![إعادة بناء فهارس المتبرعين](screenshots/REBUILD.PNG) |
 | ![توليد NVS](screenshots/REG_NVS.PNG) | ![نتائج NVS](screenshots/REG_NVS_RESULTS.PNG) |
 | ![النتائج](screenshots/RESULTSE.PNG) | ![نبذة عن](screenshots/ABOUT.PNG) |
+
+#### أداة سطر الأوامر (CLI)
+نفس المحرّك متاح أيضاً كأداة سطر أوامر (`PS4_NOR_EASYTOOL_V1.exe`):
+
+| | |
+|---|---|
+| ![القائمة الرئيسية للـCLI](screenshots/CLI_MAIN.PNG) | ![خيارات إصلاح NOR](screenshots/NOR_REPAIR_OPTIONS.PNG) |
+| ![نتائج الـCLI](screenshots/RESULTS_CLI.PNG) | ![NVS](screenshots/NVS_CLI.PNG) |
+| ![نتائج NVS للـCLI](screenshots/NVS_RESULTS_CLI.PNG) | |
 
 ---
 
