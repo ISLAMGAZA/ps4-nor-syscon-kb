@@ -103,6 +103,16 @@ ps4-nor-syscon-kb/
 - **License**: code and scripts under **MIT**; documentation under **CC-BY-4.0**.
 - **Donate**: [paypal.me/islamjamelak](https://paypal.me/islamjamelak).
 
+### Screenshots
+A look at the tool and knowledge base in action:
+
+| | |
+|---|---|
+| ![Main menu](screenshots/MAINMENU.PNG) | ![Scan](screenshots/SCAN.PNG) |
+| ![Repair](screenshots/REPAIR.PNG) | ![Rebuild donor indexes](screenshots/REBUILD.PNG) |
+| ![Regenerate NVS](screenshots/REG_NVS.PNG) | ![Reg NVS results](screenshots/REG_NVS_RESULTS.PNG) |
+| ![Results](screenshots/RESULTSE.PNG) | ![About](screenshots/ABOUT.PNG) |
+
 ---
 
 ## العربية
@@ -158,6 +168,16 @@ ps4-nor-syscon-kb/
   بالاستناد إلى أداة وبيانات ISLAM JAMEL.
 - **الرخصة**: الكود والسكربتات تحت **MIT**؛ التوثيق تحت **CC-BY-4.0**.
 - **تبرع**: [paypal.me/islamjamelak](https://paypal.me/islamjamelak).
+
+### لقطات الشاشة
+لمحة عن الأداة وقاعدة المعرفة أثناء العمل:
+
+| | |
+|---|---|
+| ![القائمة الرئيسية](screenshots/MAINMENU.PNG) | ![الفحص](screenshots/SCAN.PNG) |
+| ![الإصلاح](screenshots/REPAIR.PNG) | ![إعادة بناء فهارس المتبرعين](screenshots/REBUILD.PNG) |
+| ![توليد NVS](screenshots/REG_NVS.PNG) | ![نتائج NVS](screenshots/REG_NVS_RESULTS.PNG) |
+| ![النتائج](screenshots/RESULTSE.PNG) | ![نبذة عن](screenshots/ABOUT.PNG) |
 
 ---
 
