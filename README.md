@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/app_logo.png" alt="PS4 NOR EASYTOOL" width="120"/>
+  <img src="branding/app_logo.png" alt="PS4 NOR EASYTOOL" width="150"/>
 </p>
 
 <h1 align="center">PS4 NOR &amp; Syscon — Open Repair Knowledge Base</h1>
@@ -14,6 +14,7 @@
   <a href="docs/en"><img alt="Docs EN/AR" src="https://img.shields.io/badge/docs-EN%2FAR-green"></a>
   <a href="community/corpus"><img alt="Corpus" src="https://img.shields.io/badge/open--corpus-anonymized-orange"></a>
   <a href="https://github.com/ISLAMGAZA"><img alt="Author" src="https://img.shields.io/badge/by-ISLAMGAZA-lightgrey"></a>
+  <a href="https://paypal.me/islamjamelak"><img alt="Donate" src="https://img.shields.io/badge/donate-PayPal-ffd43b"></a>
 </p>
 
 ---
@@ -21,6 +22,8 @@
 ## English
 
 ### What is this?
+> **Status:** A personal effort (تعب شخصي) — still under active development (قيد التطوير).
+
 A free, open project that turns the knowledge embedded in **PS4 NOR EASYTOOL V1**
 into a **shared, searchable repair knowledge base** for the PS4 maintenance
 community. It documents NOR / Syscon regions, faults, downgrade paths, and field
@@ -105,6 +108,8 @@ ps4-nor-syscon-kb/
 ## العربية
 
 ### ما هذا المشروع؟
+> **الحالة:** جهد شخصي (تعب شخصي) — لا يزال قيد التطوير النشط (قيد التطوير).
+
 مشروع مفتوح ومجاني يحوّل المعرفة المضمّنة في أداة **PS4 NOR EASYTOOL V1** إلى
 **قاعدة معرفة مشتركة قابلة للبحث** لصيانة متحكمات PS4 NOR و Syscon، مصحوباً
 بالتطبيق الرفيق **PS4 NOR EASYTOOL V1** من إعداد **ISLAM JAMEL**.
@@ -153,3 +158,17 @@ ps4-nor-syscon-kb/
   بالاستناد إلى أداة وبيانات ISLAM JAMEL.
 - **الرخصة**: الكود والسكربتات تحت **MIT**؛ التوثيق تحت **CC-BY-4.0**.
 - **تبرع**: [paypal.me/islamjamelak](https://paypal.me/islamjamelak).
+
+---
+
+## A note from the assistant · بصمة
+
+> Assembled with **opencode** — for the hands that repair, not the bins that
+> fill. Every console brought back to life is a small victory; this project
+> only helps map the way.
+>
+> صِيغَتْ بـ **opencode** — لأجل الأيادي التي تُصلح، لا للحاويات التي تمتلئ.
+> كل جهاز يُعاد إحياؤه نصرٌ صغير، وهذا المشروع لا يرسم سوى الطريق.
+
+**Tool & data:** ISLAM JAMEL · [github.com/ISLAMGAZA](https://github.com/ISLAMGAZA)  
+**Support the work:** [paypal.me/islamjamelak](https://paypal.me/islamjamelak)
