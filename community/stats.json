@@ -1,0 +1,13 @@
+{
+  "total_reports": 1,
+  "by_model_fw": {
+    "22 / FW13.02": {
+      "reports": 1,
+      "status": {
+        "healthy": 1
+      },
+      "top_faults": []
+    }
+  },
+  "top_faults_global": []
+}

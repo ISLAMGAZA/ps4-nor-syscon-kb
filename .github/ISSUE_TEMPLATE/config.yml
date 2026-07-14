@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💬 Questions & community help"
+    url: https://github.com/ISLAMGAZA/ps4-nor-syscon-kb/discussions
+    about: Ask how-to questions and share repairs in Discussions.
+  - name: "📚 Documentation"
+    url: https://github.com/ISLAMGAZA/ps4-nor-syscon-kb/tree/main/docs
+    about: Read the EN/AR field manuals before opening an issue.

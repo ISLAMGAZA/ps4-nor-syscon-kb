@@ -1,0 +1,21 @@
+name: Submit an anonymized dump report
+description: Contribute an anonymized health report to the open corpus.
+labels: ["corpus"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The easiest way is the in-app **Submit to corpus** button — it is
+        fully anonymized (no serial / MAC / HDD / board-id). Otherwise, attach
+        a JSON produced by `main.export_report()`.
+  - type: textarea
+    id: report
+    attributes:
+      label: Paste the anonymized JSON report
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: "This report contains NO serial / MAC / HDD / board-id."
+          required: true

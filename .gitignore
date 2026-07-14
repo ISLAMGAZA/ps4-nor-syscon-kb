@@ -1,0 +1,13 @@
+# Secrets / local overrides (never commit these)
+token.txt
+.env
+*.local.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db

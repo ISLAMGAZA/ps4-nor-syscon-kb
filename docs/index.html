@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PS4 NOR & Syscon Open Repair KB</title>
+<style>
+ body{font-family:Segoe UI,system-ui,Arial,sans-serif;margin:0;background:#14141a;color:#e6e6e6}
+ header{background:#1e1e26;padding:14px 20px;display:flex;align-items:center;gap:14px}
+ header h1{font-size:17px;margin:0}
+ button{background:#2b2b36;color:#e6e6e6;border:1px solid #3a3a48;border-radius:6px;padding:6px 12px;cursor:pointer}
+ button.active{background:#4dabf7;color:#10101a;border-color:#4dabf7}
+ main{max-width:980px;margin:0 auto;padding:18px}
+ table{border-collapse:collapse;width:100%%;margin:10px 0;font-size:13px}
+ th,td{border:1px solid #2c2c38;padding:6px 8px;text-align:left}
+ th{background:#1e1e26}
+ .en,.ar{display:none}
+ body.lang-en .en{display:block}
+ body.lang-ar .ar{display:block}
+ h2{color:#4dabf7;border-bottom:1px solid #2c2c38;padding-bottom:4px}
+ code{background:#0f0f13;padding:1px 5px;border-radius:4px}
+ footer{color:#888;font-size:12px;padding:18px;text-align:center}
+</style>
+</head>
+<body class="lang-en">
+<header>
+ <h1>PS4 NOR &amp; Syscon Open Repair KB</h1>
+ <span style="flex:1"></span>
+ <button id="en" class="active" onclick="setLang('en')">EN</button>
+ <button id="ar" onclick="setLang('ar')">ع</button>
+</header>
+<main>
+ <div class="en"><p>Generated from <code>PS4 NOR EASYTOOL V1</code> (by ISLAM JAMEL). Machine-readable source: <code>kb.json</code>.</p></div>
+ <div class="ar"><p>مولّدة من <code>PS4 NOR EASYTOOL V1</code> (بواسطة ISLAM JAMEL). المصدر الآلي: <code>kb.json</code>.</p></div>
+ <div class="en">
+ <h2>NOR flash regions (32 MB sflash0)</h2>
+ <table><thead><tr><th>Region</th><th>Offset</th><th>Size</th><th>Class</th><th>Per-console</th><th>Donor</th></tr></thead>
+ <tbody><tr><td>s0_header</td><td>0x0</td><td>0x1000</td><td>struct</td><td>—</td><td>—</td></tr>
+<tr><td>s0_active_slot</td><td>0x1000</td><td>0x1000</td><td>struct</td><td>—</td><td>—</td></tr>
+<tr><td>s0_mbr1</td><td>0x2000</td><td>0x1000</td><td>struct</td><td>—</td><td>—</td></tr>
+<tr><td>s0_mbr2</td><td>0x3000</td><td>0x1000</td><td>struct</td><td>—</td><td>—</td></tr>
+<tr><td>s0_emc_ipl_a</td><td>0x4000</td><td>0x60000</td><td>shared</td><td>—</td><td>✔</td></tr>
+<tr><td>s0_emc_ipl_b</td><td>0x64000</td><td>0x60000</td><td>shared</td><td>—</td><td>✔</td></tr>
+<tr><td>s0_eap_kbl</td><td>0xC4000</td><td>0x80000</td><td>shared</td><td>—</td><td>✔</td></tr>
+<tr><td>s0_wifi</td><td>0x144000</td><td>0x80000</td><td>shared</td><td>—</td><td>✔</td></tr>
+<tr><td>s0_nvs</td><td>0x1C4000</td><td>0xC000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s0_blank</td><td>0x1D0000</td><td>0x30000</td><td>blank</td><td>—</td><td>—</td></tr>
+<tr><td>s1_header</td><td>0x200000</td><td>0x1000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_active_slot</td><td>0x201000</td><td>0x1000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_mbr1</td><td>0x202000</td><td>0x1000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_mbr2</td><td>0x203000</td><td>0x1000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_sam_ipl_a</td><td>0x204000</td><td>0x3E000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_sam_ipl_b</td><td>0x242000</td><td>0x3E000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_idata</td><td>0x280000</td><td>0x80000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_bd_hrl</td><td>0x300000</td><td>0x80000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_vtrm</td><td>0x380000</td><td>0x40000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_coreos_b</td><td>0x3C0000</td><td>0xCC0000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_coreos_a</td><td>0x1080000</td><td>0xCC0000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_blank</td><td>0x1D40000</td><td>0x2C0000</td><td>blank</td><td>—</td><td>—</td></tr></tbody></table>
+
+ <h2>Fault action vocabulary</h2>
+ <table><thead><tr><th>Action</th><th>Bucket</th><th>Fixability</th><th>Meaning</th></tr></thead>
+ <tbody><tr><td>ok</td><td>ok</td><td>none</td><td>Region verified good; untouched.</td></tr>
+<tr><td>blank_ok</td><td>ok</td><td>none</td><td>Intentionally empty padding.</td></tr>
+<tr><td>per_console_ok</td><td>ok</td><td>none</td><td>Per-console region present and valid; must not be changed.</td></tr>
+<tr><td>rebuilt</td><td>info</td><td>auto</td><td>Structurally rebuilt from donor consensus.</td></tr>
+<tr><td>skipped</td><td>info</td><td>user</td><td>Region intentionally skipped (user choice).</td></tr>
+<tr><td>donor_repaired</td><td>repaired</td><td>donor</td><td>Replaced with a matching donor blob (same HWID/FW).</td></tr>
+<tr><td>self_backup_main</td><td>repaired</td><td>self</td><td>Copied the in-dump backup copy over the corrupted main copy.</td></tr>
+<tr><td>self_main_backup</td><td>repaired</td><td>self</td><td>Copied the good main copy into the backup slot.</td></tr>
+<tr><td>donor_regen</td><td>repaired</td><td>donor</td><td>Regenerated CID/UNK from a same-Board-ID donor.</td></tr>
+<tr><td>regen_random_destructive</td><td>repaired</td><td>destructive</td><td>Generated a random EAP key; REQUIRES HDD wipe. Last resort.</td></tr>
+<tr><td>ok_unverified</td><td>warning</td><td>review</td><td>Not provably corrupt; kept as-is, flagged for review.</td></tr>
+<tr><td>flag_unverified</td><td>warning</td><td>review</td><td>Could not verify; needs human review.</td></tr>
+<tr><td>flag_needs_donor</td><td>warning</td><td>donor</td><td>Corrupt/blank and no self-backup; a donor match is required.</td></tr>
+<tr><td>flag_unknown_fw</td><td>warning</td><td>review</td><td>Firmware not recognised by the donor DB.</td></tr>
+<tr><td>flag_review</td><td>warning</td><td>review</td><td>Ambiguous result; manual inspection advised.</td></tr>
+<tr><td>corrupt_mismatch</td><td>warning</td><td>two-candidate</td><td>Main and backup copies both non-blank but differ -> TWO candidates emitted (A=backup, B=main); trial-flash to discover the good one.</td></tr>
+<tr><td>torus_ambiguous</td><td>warning</td><td>trial</td><td>Wi-Fi/BT firmware HWID ambiguous; candidate blobs listed to trial-flash.</td></tr>
+<tr><td>flag_unrecoverable</td><td>critical</td><td>unrecoverable</td><td>No source to repair from (blank per-console / dead EAP key with no backup). Hard stop; often needs hardware or SAMU.</td></tr>
+<tr><td>self_unrecoverable</td><td>critical</td><td>unrecoverable</td><td>Syscon NVS has no in-dump redundancy to self-repair from.</td></tr>
+<tr><td>self_both_dead</td><td>critical</td><td>unrecoverable</td><td>Both main and backup copies are dead.</td></tr></tbody></table>
+
+ <h2>Operation</h2>
+ <table><thead><tr><th>Operation</th><th>What it does</th><th>Problem solved</th></tr></thead>
+ <tbody><tr><td>Scan</td><td>Dry-run analysis; reports every region's health without writing.</td><td>Triage: 'is this dump broken, and can it be fixed?'</td></tr>
+<tr><td>Full repair</td><td>Scans, shows changes, writes fixed/<name>.fixed.bin. Original untouched.</td><td>One-click safe repair of a corrupt dump.</td></tr>
+<tr><td>Regen NVS (CID/UNK)</td><td>Regenerates CID/UNK from same-Board-ID, FW>=target donors; emits M1/M2/M3.</td><td>CID/UNK corruption when the in-NOR backup is also dead.</td></tr>
+<tr><td>SMART revert</td><td>Legit CoreOS patch + SNVS autopatch using the console's own 2nd dump.</td><td>Safe firmware downgrade (no glitch) for a patched console.</td></tr>
+<tr><td>Slot switch</td><td>Generates 14 (or family-narrowed) CORE_SWCH patterns + UART-on + optional Syscon SNVS autopatch.</td><td>'No-legit' downgrade requiring Syscon pin-lift/microsoldering.</td></tr>
+<tr><td>Restore own Syscon</td><td>Copies NVS from the SAME console's own backup dump.</td><td>Recover Syscon identity without altering serial/MAC.</td></tr>
+<tr><td>Restore partner Syscon</td><td>Restores NVS from a PAIRED Syscon of the same console.</td><td>Cross-Syscon recovery when one chip's NVS is corrupt.</td></tr>
+<tr><td>Verify Syscon vs NOR</td><td>Read-only: compares Syscon board-id vs NOR board-id (1-byte offset).</td><td>Confirm a Syscon actually belongs to the paired NOR.</td></tr></tbody></table>
+
+ <h2>Field manual - tribal knowledge</h2>
+ <ul><li>EAP_KEY is the only truly unrecoverable NOR field. On 10xx/11xx there is NO in-NOR backup at all, so a dead EAP key is permanently unrecoverable without SAMU; the only option is destructive random regen + HDD reformat.</li>
+<li>Syscon NVS has ZERO in-dump redundancy (0/869 dumps show a main/backup split), so unlike NOR NVS it cannot self-repair from the same file - it only ever says 'restore from your own backup'.</li>
+<li>There is a 1-byte board-id encoding offset between NOR (byte3 = 0x06) and Syscon (byte3 = 0x05); this is why the tool refuses raw NOR->Syscon seeding.</li>
+<li>The SNVS population threshold (>10,000 non-blank bytes in 0x60000-0x6A000) is an empirical magic number separating revertable (~27k) from 'Not patchable' (~2.4k) consoles; borderline (~10k) is a gray area.</li>
+<li>The eMMC INACTIVE bank is intentionally left alone based on MBR ground-truth; a technician comparing a 'fixed' dump may see one emc bank unchanged and think repair failed - it is by design.</li>
+<li>corrupt_mismatch (EAP main vs backup differ, both non-blank) produces TWO candidate files (A_backup, B_main) rather than one fix; trial-flash to discover which copy is good.</li>
+<li>s0_nvs is not one opaque blob - it is a precisely sub-addressed structure (nvs.AREAS) with a +0x3000 mirror. Most NOR 'per-console' warnings actually stem from these sub-fields; the layout map alone hides this.</li>
+<li>Syscon repair restores ONLY sc_code to donor consensus; sc_nvs identity (board-id/serial/MAC/calibration) and the entire SAMU-encrypted SNVS are per-console and never transplanted.</li>
+<li>NOR write order matters: always write NOR first, then Syscon, matching. Out-of-sync writes cause BLOD (CE-40947-4).</li>
+<li>Two distinct NVS parsers exist: nvs.py (NOR, simple fixed offsets) vs syscon_nvs_cpp.py (faithful fail0verflow port: flat+sparse history, write-counters). The Syscon one is the authoritative SNVS reference.</li>
+<li>Model->silicon mapping is hardcoded in multiple places (sce.py, fws.py, revert.py). New CUH models (e.g. 7xxx PRO) are partially covered; anything unmapped falls back to 'all 14 slot-switch patterns'.</li>
+<li>fws.DEFAULT_ROOT is a hardcoded absolute path (C:\6\DONORS\fws) that diverges from main.FWS_DIR (<app>/DONORS/fws); keep donor blobs at the app-dir copy or the GUI may not see them.</li>
+<li>FW number parsing strips dots and int()s them ('13.04' -> 1304) and compares numerically; mixed-width FW strings could mis-rank donors.</li>
+<li>A 'healthy' dump writes NOTHING (do_repair is a no-op); a 'repairable' dump produces a fixed .bin; any 'needs-review' action is a hard stop that emits candidate(s) for trial, not a single silent fix.</li></ul>
+
+ <h2>Downgrade & slot-switch</h2>
+ <p>The correct 16-byte CORE_SWCH descriptor is console/model specific and not predictable; the tool brute-forces it by writing NOR #N + patched Syscon and reading UART.</p>
+</div>
+ <div class="ar">
+ <h2>مناطق NOR (32 ميجا sflash0)</h2>
+ <table><thead><tr><th>المنطقة</th><th>الإزاحة</th><th>الحجم</th><th>الفئة</th><th>خاصة بالكونسول</th><th>متبرّع</th></tr></thead>
+ <tbody><tr><td>s0_header</td><td>0x0</td><td>0x1000</td><td>struct</td><td>—</td><td>—</td></tr>
+<tr><td>s0_active_slot</td><td>0x1000</td><td>0x1000</td><td>struct</td><td>—</td><td>—</td></tr>
+<tr><td>s0_mbr1</td><td>0x2000</td><td>0x1000</td><td>struct</td><td>—</td><td>—</td></tr>
+<tr><td>s0_mbr2</td><td>0x3000</td><td>0x1000</td><td>struct</td><td>—</td><td>—</td></tr>
+<tr><td>s0_emc_ipl_a</td><td>0x4000</td><td>0x60000</td><td>shared</td><td>—</td><td>✔</td></tr>
+<tr><td>s0_emc_ipl_b</td><td>0x64000</td><td>0x60000</td><td>shared</td><td>—</td><td>✔</td></tr>
+<tr><td>s0_eap_kbl</td><td>0xC4000</td><td>0x80000</td><td>shared</td><td>—</td><td>✔</td></tr>
+<tr><td>s0_wifi</td><td>0x144000</td><td>0x80000</td><td>shared</td><td>—</td><td>✔</td></tr>
+<tr><td>s0_nvs</td><td>0x1C4000</td><td>0xC000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s0_blank</td><td>0x1D0000</td><td>0x30000</td><td>blank</td><td>—</td><td>—</td></tr>
+<tr><td>s1_header</td><td>0x200000</td><td>0x1000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_active_slot</td><td>0x201000</td><td>0x1000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_mbr1</td><td>0x202000</td><td>0x1000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_mbr2</td><td>0x203000</td><td>0x1000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_sam_ipl_a</td><td>0x204000</td><td>0x3E000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_sam_ipl_b</td><td>0x242000</td><td>0x3E000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_idata</td><td>0x280000</td><td>0x80000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_bd_hrl</td><td>0x300000</td><td>0x80000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_vtrm</td><td>0x380000</td><td>0x40000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_coreos_b</td><td>0x3C0000</td><td>0xCC0000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_coreos_a</td><td>0x1080000</td><td>0xCC0000</td><td>per_console</td><td>✔</td><td>—</td></tr>
+<tr><td>s1_blank</td><td>0x1D40000</td><td>0x2C0000</td><td>blank</td><td>—</td><td>—</td></tr></tbody></table>
+
+ <h2>مفردات إجراءات الأعطال</h2>
+ <table><thead><tr><th>الإجراء</th><th>الحالة</th><th>القابلية للإصلاح</th><th>المعنى</th></tr></thead>
+ <tbody><tr><td>ok</td><td>ok</td><td>none</td><td>المنطقة سليمة تم التحقق منها؛ لم تُعدّل.</td></tr>
+<tr><td>blank_ok</td><td>ok</td><td>none</td><td>مساحة فارغة مقصودة (حشو).</td></tr>
+<tr><td>per_console_ok</td><td>ok</td><td>none</td><td>منطقة خاصة بالكونسول موجودة وصالحة؛ لا يجوز تغييرها.</td></tr>
+<tr><td>rebuilt</td><td>info</td><td>auto</td><td>أُعيد بناؤه بنيويًا من إجماع المتبرعين.</td></tr>
+<tr><td>skipped</td><td>info</td><td>user</td><td>تم تخطّي المنطقة (باختيار المستخدم).</td></tr>
+<tr><td>donor_repaired</td><td>repaired</td><td>donor</td><td>استُبدلت بكتلة متبرّع مطابقة (نفس HWID/FW).</td></tr>
+<tr><td>self_backup_main</td><td>repaired</td><td>self</td><td>نُسخت النسخة الاحتياطية داخل الدمبة فوق النسخة التالفة.</td></tr>
+<tr><td>self_main_backup</td><td>repaired</td><td>self</td><td>نُسخت النسخة الرئيسية السليمة إلى موقع النسخة الاحتياطية.</td></tr>
+<tr><td>donor_regen</td><td>repaired</td><td>donor</td><td>أُعيد توليد CID/UNK من متبرّع بنفس معرّف اللوحة.</td></tr>
+<tr><td>regen_random_destructive</td><td>repaired</td><td>destructive</td><td>وُلّد مفتاح EAP عشوائي؛ يتطلب مسح القرص الصلب. حل أخير.</td></tr>
+<tr><td>ok_unverified</td><td>warning</td><td>review</td><td>غير مؤكد أنه تالف؛ تُرك كما هو مع تعليمه للمراجعة.</td></tr>
+<tr><td>flag_unverified</td><td>warning</td><td>review</td><td>تعذّر التحقق؛ يحتاج مراجعة بشرية.</td></tr>
+<tr><td>flag_needs_donor</td><td>warning</td><td>donor</td><td>تالف/فارغ بلا نسخة احتياطية؛ يتطلب مطابقة متبرّع.</td></tr>
+<tr><td>flag_unknown_fw</td><td>warning</td><td>review</td><td>برنامج غير معروف في قاعدة المتبرعين.</td></tr>
+<tr><td>flag_review</td><td>warning</td><td>review</td><td>نتيجة غامضة؛ يُنصح بالفحص اليدوي.</td></tr>
+<tr><td>corrupt_mismatch</td><td>warning</td><td>two-candidate</td><td>النسختان الرئيسية والاحتياطية غير فارغتين ومختلفتين -> يُنتج ملفّين مرشّحين (A=احتياطي، B=رئيسي)؛ جرّب البرمجة لاكتشاف الصحيح.</td></tr>
+<tr><td>torus_ambiguous</td><td>warning</td><td>trial</td><td>معرّف واي-فاي/بلوتوث غامض؛ تُدرج كتل مرشّحة للتجربة.</td></tr>
+<tr><td>flag_unrecoverable</td><td>critical</td><td>unrecoverable</td><td>لا مصدر للإصلاح (منطقة خاصة فارغة / مفتاح EAP ميت بلا نسخة). توقف إجباري؛ غالبًا يحتاج أجهزة أو SAMU.</td></tr>
+<tr><td>self_unrecoverable</td><td>critical</td><td>unrecoverable</td><td>ذاكرة Syscon NVS بلا تكرار داخلي للإصلاح الذاتي.</td></tr>
+<tr><td>self_both_dead</td><td>critical</td><td>unrecoverable</td><td>النسختان الرئيسية والاحتياطية ميتتان.</td></tr></tbody></table>
+
+ <h2>العملية</h2>
+ <table><thead><tr><th>العملية</th><th>ماذا تفعل</th><th>المشكلة المُحلّة</th></tr></thead>
+ <tbody><tr><td>تشخيص</td><td>تحليل تجريبي؛ يبلّغ صحة كل منطقة دون كتابة.</td><td>فرز أولي: 'هل الدمبة معطوبة، وهل يمكن إصلاحها؟'</td></tr>
+<tr><td>إصلاح كامل</td><td>يفحص، يعرض التغييرات، يكتب fixed/<name>.fixed.bin. الأصل لم يُمس.</td><td>إصلاح آمن بنقرة واحدة لدمبة معطوبة.</td></tr>
+<tr><td>توليد NVS</td><td>يولّد CID/UNK من متبرّعين بنفس اللوحة وFW>=الهدف؛ يُنتج M1/M2/M3.</td><td>فساد CID/UNK عند موت النسخة الاحتياطية داخل NOR أيضًا.</td></tr>
+<tr><td>رجوع ذكي</td><td>رقعة CoreOS شرعية + autopatch لـ SNVS باستخدام الدمبة الثانية للكونسول.</td><td>تنزيل برنامج آمن (بلا glitch) لكونسول معدّل.</td></tr>
+<tr><td>قلب البنوك</td><td>يولّد أنماط CORE_SWCH الـ14 (أو المضيّقة بالموديل) + تفعيل UART + autopatch Syscon اختياري.</td><td>تنزيل 'لا-شرعي' يتطلب رفع سن Syscon/لحام دقيق.</td></tr>
+<tr><td>استرجاع Syscon الخاص</td><td>ينسخ NVS من دمبة النسخة الاحتياطية لنفس الكونسول.</td><td>استرجاع هوية Syscon دون تغيير السيريال/MAC.</td></tr>
+<tr><td>استرجاع من شريك</td><td>يسترجع NVS من Syscon مقرون لنفس الكونسول.</td><td>استرجاع عبر Syscon عند فساد NVS في شريحة واحدة.</td></tr>
+<tr><td>تحقق Syscon مقابل NOR</td><td>للقراءة فقط: يقارن board-id الخاص بـ Syscon مع NOR (إزاحة بايت واحد).</td><td>التأكد أن Syscon يخص NOR المقرون فعلاً.</td></tr></tbody></table>
+
+ <h2>الدليل الميداني - معرفة تراكمية</h2>
+ <ul><li>مفتاح EAP_KEY هو الحقل الوحيد غير القابل للاسترجاع نهائيًا في NOR. على 10xx/11xx لا توجد نسخة احتياطية داخل NOR إطلاقًا، فمفتاح EAP ميت لا يُسترجع بلا SAMU؛ الحل الوحيد توليد عشوائي مدمر + مسح القرص.</li>
+<li>ذاكرة Syscon NVS بلا أي تكرار داخل الملف (0 من 869 دمبة تظهر تقسيم رئيسي/احتياطي)، فعلى عكس NOR NVS لا يمكن إصلاحها ذاتيًا من نفس الملف - تقول فقط 'استرجع من نسختك الاحتياطية'.</li>
+<li>إزاحة بايت واحد في board-id بين NOR (البايت 3 = 0x06) وSyscon (البايت 3 = 0x05)؛ لذا ترفض الأداة البذر الخام من NOR إلى Syscon.</li>
+<li>عتبة امتلاء SNVS (>10000 بايت غير فارغ في 0x60000-0x6A000) رقم تجريبي يفصل القابل للرجوع (~27k) عن 'غير قابل للرقعة' (~2.4k)؛ الحدود (~10k) منطقة رمادية.</li>
+<li>يُترك بنك eMMC غير النشط عمدًا استنادًا إلى حقيقة MBR؛ قد يرى الفني بنك emc واحدًا دون تغيير فيظن الإصلاح فشل - هذا مقصود.</li>
+<li>corrupt_mismatch (اختلاف EAP بين الرئيسي والاحتياطي وكلاهما غير فارغ) يُنتج ملفّين مرشّحين (A_backup، B_main) لا إصلاحًا واحدًا؛ جرّب البرمجة.</li>
+<li>s0_nvs ليس كتلة معتمة واحدة - بل بنية مُعنونة بدقة (nvs.AREAS) مع مرآة +0x3000. معظم تحذيرات NOR 'الخاصة بالكونسول' نابعة من these الحقول الفرعية.</li>
+<li>إصلاح Syscon لا يسترجع سوى sc_code إلى إجماع المتبرعين؛ هوية sc_nvs (board-id/serial/MAC/معايرة) وكل SNVS المشفّر بـ SAMU خاصة بالكونسول ولا تُنقل.</li>
+<li>ترتيب البرمجة مهم: NOR أولًا ثم Syscon متطابقين. الكتابة غير المتزامنة تسبب BLOD (CE-40947-4).</li>
+<li>هناك محلّلان مختلفان للـ NVS: nvs.py (NOR، إزاحات ثابتة بسيطة) و syscon_nvs_cpp.py (منفذ وفي faithful لـ fail0verflow: تاريخ flat+sparse، عدّادات كتابة). نسخة Syscon هي المرجع المعتمد لـ SNVS.</li>
+<li>ربط الموديل بالسليكون مُرمّز ثابت في أماكن عدة (sce.py، fws.py، revert.py). موديلات CUH جديدة (مثل 7xxx PRO) مغطاة جزئيًا؛ أي موديل غير مصنّف يرجع إلى 'كل أنماط slot-switch الـ14'.</li>
+<li>fws.DEFAULT_ROOT مسار مطلق مرمّز (C:\6\DONORS\fws) يختلف عن main.FWS_DIR (<app>/DONORS/fws)؛ احتفظ بكتل المتبرعين في نسخة مجلد التطبيق وإلا قد لا تراها الواجهة.</li>
+<li>تحليل رقم FW يزيل النقاط ويعامله int() ('13.04' -> 1304) ويقارن رقميًا؛ سلاسل FW بعرض مختلط قد ترتّب المتبرعين خطأً.</li>
+<li>الدمبة 'السليمة' لا تكتب شيئًا (do_repair لا يفعل شيئًا)؛ 'القابلة للإصلاح' تنتج fixed.bin؛ أي إجراء 'يحتاج مراجعة' توقف إجباري يُنتج مرشّحًا/مرشّحين للتجربة لا إصلاحًا صامتًا.</li></ul>
+
+ <h2>التنزيل وقلب البنوك</h2>
+ <p>واصف CORE_SWCH المكوّن من 16 بايت خاص بكل كونسول/موديل وغير قابل للتنبؤ؛ الأداة تخمّنه بكتابة NOR رقم N + Syscon معدّل وقراءة UART.</p>
+</div>
+</main>
+<footer>Docs CC-BY-4.0; code MIT. Tool &amp; data by ISLAM JAMEL. Generated 2026-07-14T13:35:27Z.</footer>
+<script>
+ function setLang(l){document.body.className='lang-'+l;
+   document.getElementById('en').classList.toggle('active',l==='en');
+   document.getElementById('ar').classList.toggle('active',l==='ar');}
+</script>
+</body></html>

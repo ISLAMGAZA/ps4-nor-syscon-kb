@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest an improvement to the tool, docs, or corpus.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What should change, and why it helps the repair community.
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - "Tool feature"
+        - "Documentation"
+        - "Corpus / stats"
+        - "Website"
+    validations:
+      required: true
