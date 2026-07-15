@@ -1,0 +1,131 @@
+{
+  "schema": "1.0",
+  "tool": "PS4 NOR EASYTOOL V1",
+  "sub": "nor",
+  "model": 70,
+  "sku": "CUH-7016B B01",
+  "fw": "12.00",
+  "assess": {
+    "status": "healthy",
+    "counts": {
+      "ok": 22
+    },
+    "changes": 0
+  },
+  "faults": [],
+  "regions": [
+    {
+      "region": "s0_header",
+      "category": "STRUCT",
+      "status": "ok"
+    },
+    {
+      "region": "s0_active_slot",
+      "category": "STRUCT",
+      "status": "ok"
+    },
+    {
+      "region": "s0_mbr1",
+      "category": "STRUCT",
+      "status": "ok"
+    },
+    {
+      "region": "s0_mbr2",
+      "category": "STRUCT",
+      "status": "ok"
+    },
+    {
+      "region": "s0_emc_ipl_a",
+      "category": "SLB2",
+      "status": "ok"
+    },
+    {
+      "region": "s0_emc_ipl_b",
+      "category": "SLB2",
+      "status": "ok"
+    },
+    {
+      "region": "s0_eap_kbl",
+      "category": "SLB2",
+      "status": "ok"
+    },
+    {
+      "region": "s0_wifi",
+      "category": "SLB2",
+      "status": "ok"
+    },
+    {
+      "region": "s0_nvs",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s0_blank",
+      "category": "BLANK",
+      "status": "blank_ok"
+    },
+    {
+      "region": "s1_header",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_active_slot",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_mbr1",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_mbr2",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_sam_ipl_a",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_sam_ipl_b",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_idata",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_bd_hrl",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_vtrm",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_coreos_b",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_coreos_a",
+      "category": "PER_CONSOLE",
+      "status": "ok"
+    },
+    {
+      "region": "s1_blank",
+      "category": "BLANK",
+      "status": "blank_ok"
+    }
+  ],
+  "donor_available": null,
+  "fingerprint_sha256": null,
+  "generated": "2026-07-14T23:46:47Z"
+}

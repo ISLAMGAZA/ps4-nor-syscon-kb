@@ -1,0 +1,61 @@
+name: Corpus from issue
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  ingest:
+    # Only run for submissions filed with the "corpus" label.
+    if: contains(join(github.event.issue.labels.*.name, ','), 'corpus')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Parse issue into a corpus report
+        id: parse
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/issue_to_corpus.py
+
+      - name: Commit new report
+        if: steps.parse.outputs.status == 'ok'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${{ steps.parse.outputs.path }}"
+          git commit -m "corpus: add report from #${{ github.event.issue.number }}"
+          git push
+
+      - name: Comment & close (accepted)
+        if: steps.parse.outputs.status == 'ok'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} \
+            --body "Thanks! ${{ steps.parse.outputs.message }} It will appear in the public stats after the next aggregation. :white_check_mark:"
+          gh issue close ${{ github.event.issue.number }} --reason completed
+
+      - name: Comment (duplicate)
+        if: steps.parse.outputs.status == 'duplicate'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} \
+            --body "${{ steps.parse.outputs.message }}"
+          gh issue close ${{ github.event.issue.number }} --reason "not planned"
+
+      - name: Comment (rejected)
+        if: steps.parse.outputs.status == 'rejected'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} \
+            --body ":warning: Your submission could not be ingested automatically: **${{ steps.parse.outputs.message }}**. Please edit the issue with a valid, anonymized JSON report produced by the tool's *Submit / Export report* function and it will be re-checked."

@@ -5,13 +5,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        The easiest way is the in-app **Submit to corpus** button — it is
-        fully anonymized (no serial / MAC / HDD / board-id). Otherwise, attach
-        a JSON produced by `main.export_report()`.
+        Paste a JSON report produced by the tool's **Export / Submit report**
+        function (it is anonymized automatically — no serial / MAC / HDD /
+        board-id). When you submit this issue a bot **validates and ingests it
+        automatically**, then adds it to `community/corpus/` and closes the
+        issue. If anything is wrong it will comment and ask you to fix it.
   - type: textarea
     id: report
     attributes:
       label: Paste the anonymized JSON report
+      description: The full JSON object. A ```json fenced block is fine too.
+      render: json
+    validations:
+      required: true
   - type: checkboxes
     id: consent
     attributes:

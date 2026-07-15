@@ -35,6 +35,17 @@
   <div class="ar"><p>مولّدة من <code>PS4 NOR EASYTOOL V1</code> (بواسطة ISLAM JAMEL). المصدر الآلي: <code>kb.json</code>.</p></div>
 
   <div class="en">
+    <h2>Community corpus — live stats</h2>
+    <p>Anonymized health reports contributed by technicians. <b id="kb-total-en">…</b> reports so far. <a href="https://github.com/ISLAMGAZA/ps4-nor-syscon-kb/issues/new?template=dump_submission.yml">Contribute yours →</a></p>
+    <div id="kb-stats-en"><p>Loading live stats…</p></div>
+  </div>
+  <div class="ar">
+    <h2>القاعدة المجتمعية — إحصاءات حيّة</h2>
+    <p>تقارير صحة لا تكشف هوية الجهاز يساهم بها الفنيون. <b id="kb-total-ar">…</b> تقرير حتى الآن. <a href="https://github.com/ISLAMGAZA/ps4-nor-syscon-kb/issues/new?template=dump_submission.yml">ساهم بتقريرك →</a></p>
+    <div id="kb-stats-ar"><p>جارٍ تحميل الإحصاءات…</p></div>
+  </div>
+
+  <div class="en">
     <p><b>Status:</b> Still under active development (قيد التطوير).</p>
     <p>Support the work: <a href="https://paypal.me/islamjamelak">paypal.me/islamjamelak</a> · code &amp; data by <a href="https://github.com/ISLAMGAZA">ISLAMGAZA</a>.</p>
     <p><i>Assembled with opencode — for the hands that repair, not the bins that fill. Every console brought back to life is a small victory; this project only helps map the way.</i></p>
@@ -228,5 +239,35 @@
  function setLang(l){document.body.className='lang-'+l;
    document.getElementById('en').classList.toggle('active',l==='en');
    document.getElementById('ar').classList.toggle('active',l==='ar');}
+
+ function esc(s){return String(s).replace(/[&<>]/g,function(c){
+   return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+
+ function renderStats(d){
+   var total=d.total_reports||0;
+   document.getElementById('kb-total-en').textContent=total;
+   document.getElementById('kb-total-ar').textContent=total;
+   var rows=Object.keys(d.by_model_fw||{}).map(function(k){
+     var v=d.by_model_fw[k];
+     var st=Object.keys(v.status||{}).map(function(s){
+       return esc(s)+':'+v.status[s];}).join(', ');
+     var ff=(v.top_faults||[]).slice(0,3).map(function(p){
+       return esc(p[0])+' ('+p[1]+')';}).join(', ')||'—';
+     return '<tr><td>'+esc(k)+'</td><td>'+v.reports+'</td><td>'+st+
+            '</td><td>'+ff+'</td></tr>';}).join('');
+   function tbl(h){return '<table><thead><tr><th>'+h[0]+'</th><th>'+h[1]+
+     '</th><th>'+h[2]+'</th><th>'+h[3]+'</th></tr></thead><tbody>'+rows+
+     '</tbody></table>';}
+   document.getElementById('kb-stats-en').innerHTML=
+     tbl(['Model / FW','Reports','Status','Top faults']);
+   document.getElementById('kb-stats-ar').innerHTML=
+     tbl(['الموديل / الإصدار','التقارير','الحالة','أبرز الأعطال']);
+ }
+ fetch('stats.json',{cache:'no-store'}).then(function(r){
+   if(!r.ok) throw 0; return r.json();}).then(renderStats).catch(function(){
+   var m='<p>Live stats unavailable yet — be the first to contribute.</p>';
+   document.getElementById('kb-stats-en').innerHTML=m;
+   document.getElementById('kb-stats-ar').innerHTML=
+     '<p>لا تتوفر إحصاءات بعد — كن أول المساهمين.</p>';});
 </script>
 </body></html>

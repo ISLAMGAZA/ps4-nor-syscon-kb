@@ -1,0 +1,31 @@
+{
+  "schema": "1.0",
+  "tool": "PS4 NOR EASYTOOL V1",
+  "sub": "syscon",
+  "model": null,
+  "sku": null,
+  "fw": null,
+  "assess": {
+    "status": "healthy",
+    "counts": {
+      "ok": 2
+    },
+    "changes": 0
+  },
+  "faults": [],
+  "regions": [
+    {
+      "region": "sc_code",
+      "category": null,
+      "status": "ok"
+    },
+    {
+      "region": "sc_nvs",
+      "category": null,
+      "status": "per_console_ok"
+    }
+  ],
+  "donor_available": null,
+  "fingerprint_sha256": null,
+  "generated": "2026-07-14T23:59:47Z"
+}

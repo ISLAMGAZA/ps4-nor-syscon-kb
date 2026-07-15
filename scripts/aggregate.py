@@ -15,6 +15,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 CORPUS = os.path.join(REPO, "community", "corpus")
 OUT = os.path.join(REPO, "community", "stats.json")
+DOCS_OUT = os.path.join(REPO, "docs", "stats.json")
 
 
 def load_reports():
@@ -56,9 +57,12 @@ def main():
         "top_faults_global": fault_global.most_common(15),
     }
     if "--json" in sys.argv:
-        with open(OUT, "w", encoding="utf-8") as f:
-            json.dump(stats, f, ensure_ascii=False, indent=2)
-        print("Wrote %s" % OUT)
+        for dest in (OUT, DOCS_OUT):
+            if not os.path.isdir(os.path.dirname(dest)):
+                continue
+            with open(dest, "w", encoding="utf-8") as f:
+                json.dump(stats, f, ensure_ascii=False, indent=2)
+            print("Wrote %s" % dest)
     # human-readable
     print("Total anonymized reports : %d" % total)
     print("Per model / FW:")

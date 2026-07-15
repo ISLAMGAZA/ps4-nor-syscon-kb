@@ -1,0 +1,46 @@
+{
+  "schema": "1.0",
+  "tool": "PS4 NOR EASYTOOL V1",
+  "sub": "syscon",
+  "model": null,
+  "sku": null,
+  "fw": null,
+  "assess": {
+    "status": "healthy",
+    "counts": {
+      "ok": 2
+    },
+    "changes": 0
+  },
+  "faults": [
+    {
+      "region": "sc_code",
+      "category": null,
+      "action": "flag_unknown_fw",
+      "note": "Boot header corrupted/unknown - cannot identify the firmware variant group, so the code cannot be consensus-repaired. Requires a clean header or the console's own backup.",
+      "repairable": false
+    },
+    {
+      "region": "sc_nvs",
+      "category": null,
+      "action": "flag_unrecoverable",
+      "note": "NVS blank + per-console (board-tied/SAMU). Restore from THIS console's own saved backup; never donate.",
+      "repairable": false
+    }
+  ],
+  "regions": [
+    {
+      "region": "sc_code",
+      "category": null,
+      "status": "flag_unknown_fw"
+    },
+    {
+      "region": "sc_nvs",
+      "category": null,
+      "status": "flag_unrecoverable"
+    }
+  ],
+  "donor_available": null,
+  "fingerprint_sha256": null,
+  "generated": "2026-07-14T23:59:50Z"
+}
